@@ -1,0 +1,4 @@
+{ "Subjects": ["Mathematics", "Computer", "Physics", "Urdu"],
+            "Obt_Marks" : ["78", "100", "86", "89"],
+            "Total_Marks" : ["100", "100", "100", "100"]
+          }
