@@ -7,6 +7,12 @@ path = os.path.join("Data", "UncleanedCSV.csv")
 df = pd.read_csv(path, encoding='latin1')
 print(df, "\n")
 
-# Removing rows that contains empty cells: dropna()
-print(df.dropna(), "\n")
+# Cleaning rows that contains empty cells
+df = df.dropna()
+print(df)
 
+# Cleaning wrong formats
+
+df = pd.read_csv(path)
+df['Date'] = pd.to_datetime(df['Date'], errors='coerce', format='%Y/%m/%d')
+print(df)

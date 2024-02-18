@@ -85,3 +85,12 @@ print(df.info())
     # dtypes: int64(2), object(1)
     # memory usage: 228.0+ bytes
     # None
+
+## Writing DataFrames to CSV & XLSX
+os.chdir("Data//")
+df = pd.DataFrame({ "Subjects": ["Mathematics", "Computer", "Physics", "Urdu"],
+                    "Obt_Marks" : ["78", "100", "86", "89"],
+                    "Total_Marks" : ["100", "100", "100", "100"]
+                })
+df.to_csv("OutPutSampleCSV.csv", index=False)           # To CSV
+df.to_excel("OutPutSampleXLSX.xlsx", index=False)       # To XLSX
