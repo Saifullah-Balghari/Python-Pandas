@@ -94,3 +94,15 @@ df = pd.DataFrame({ "Subjects": ["Mathematics", "Computer", "Physics", "Urdu"],
                 })
 df.to_csv("OutPutSampleCSV.csv", index=False)           # To CSV
 df.to_excel("OutPutSampleXLSX.xlsx", index=False)       # To XLSX
+
+# Correlations
+df2 = pd.read_csv("data.csv", encoding='latin1' )
+corr = df2.corr()
+print(corr)
+
+# Output:
+    #           Duration     Pulse  Maxpulse  Calories
+    # Duration  1.000000 -0.155408  0.009403  0.922717
+    # Pulse    -0.155408  1.000000  0.786535  0.025121
+    # Maxpulse  0.009403  0.786535  1.000000  0.203813
+    # Calories  0.922717  0.025121  0.203813  1.000000
